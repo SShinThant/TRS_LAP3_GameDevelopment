@@ -64,6 +64,10 @@ namespace SST
             inputHandler.sprintFlag = false;
             inputHandler.la_Input = false;
             inputHandler.ha_Input = false;
+            inputHandler.d_Pad_Up = false;
+            inputHandler.d_Pad_Down = false;
+            inputHandler.d_Pad_Left = false;
+            inputHandler.d_Pad_Right = false;
 
             if (isInAir)
             {
