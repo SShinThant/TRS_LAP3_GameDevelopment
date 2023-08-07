@@ -6,8 +6,11 @@ namespace SST
 {
     public class WeaponSlotManager : MonoBehaviour
     {
+        PlayerManager playerManager;
+
         WeaponHolderSlot leftHandSlot;
         WeaponHolderSlot rightHandSlot;
+        WeaponHolderSlot backSlot;
 
         DamageCollider leftHandDamageCollider;
         DamageCollider rightHandDamageCollider;
@@ -16,10 +19,15 @@ namespace SST
 
         QuickSlotsUI quickSlotsUI;
 
+        PlayerStats playerStats;
+        InputHandler inputHandler;
+
         private void Awake()
         {
+            playerManager = GetComponentInParent<PlayerManager>();
             animator = GetComponent<Animator>();
             quickSlotsUI = FindObjectOfType<QuickSlotsUI>();
+            inputHandler = GetComponentInParent<InputHandler>();
 
             WeaponHolderSlot[] weaponHolderSlots = GetComponentsInChildren<WeaponHolderSlot>();
             foreach (WeaponHolderSlot weaponSlot in weaponHolderSlots)
@@ -32,6 +40,10 @@ namespace SST
                 {
                     rightHandSlot = weaponSlot;
                 }
+                else if (weaponSlot.isBackSlot)
+                {
+                    backSlot = weaponSlot;
+                }
             }
         }
 
@@ -39,6 +51,7 @@ namespace SST
         {
             if (isLeft)
             {
+                leftHandSlot.currentWeapon = weaponItem;
                 leftHandSlot.LoadWeaponModel(weaponItem);
                 LoadLeftWeaponDamageCollider();
                 quickSlotsUI.UpdateWeaponQuickSlotsUI(true, weaponItem);
@@ -55,19 +68,34 @@ namespace SST
             }
             else
             {
-                rightHandSlot.LoadWeaponModel(weaponItem);
-                LoadRightWeaponDamageCollider();
-                quickSlotsUI.UpdateWeaponQuickSlotsUI(false, weaponItem);
-                #region Handle Right Weapon Idle Animations
-                if (weaponItem != null)
+                if (inputHandler.twoHandFlag)
                 {
-                    animator.CrossFade(weaponItem.Right_Hand_Idle, 0.2f);
+                    backSlot.LoadWeaponModel(leftHandSlot.currentWeapon);
+                    leftHandSlot.UnloadWeaponAndDestroy();
+                    animator.CrossFade(weaponItem.th_Idle, 0.2f);
                 }
                 else
                 {
-                    animator.CrossFade("Right Arm Empty", 0.2f);
+                    #region Handle Right Weapon Idle Animations
+
+                    animator.CrossFade("Both Arms Empty", 0.2f);
+
+                    backSlot.UnloadWeaponAndDestroy();
+                    if (weaponItem != null)
+                    {
+                        animator.CrossFade(weaponItem.Right_Hand_Idle, 0.2f);
+                    }
+                    else
+                    {
+                        animator.CrossFade("Right Arm Empty", 0.2f);
+                    }
+                    #endregion
                 }
-                #endregion
+
+                rightHandSlot.currentWeapon = weaponItem;
+                rightHandSlot.LoadWeaponModel(weaponItem);
+                LoadRightWeaponDamageCollider();
+                quickSlotsUI.UpdateWeaponQuickSlotsUI(false, weaponItem);
             }
         }
 
@@ -83,25 +111,33 @@ namespace SST
             rightHandDamageCollider = rightHandSlot.currentWeaponModel.GetComponentInChildren<DamageCollider>();
         }
 
-        public void OpenRightDamageCollider()
+        public void OpenDamageCollider()
         {
-            rightHandDamageCollider.EnableDamageCollider();
+            if (playerManager.isUsingRightHand)
+            {
+                rightHandDamageCollider.EnableDamageCollider();
+            }
+            else if (playerManager.isUsingLeftHand)
+            {
+                leftHandDamageCollider.EnableDamageCollider();
+            }          
         }
 
-        public void OpenLeftDamageCollider()
+        /*public void OpenLeftDamageCollider()
         {
             leftHandDamageCollider.EnableDamageCollider();
-        }
+        }*/
 
-        public void CloseRightHandDamageCollider()
+        public void CloseDamageCollider()
         {
             rightHandDamageCollider.DisableDamageCollider();
-        }
-
-        public void CloseLeftHandDamageCollider()
-        {
             leftHandDamageCollider.DisableDamageCollider();
         }
+
+        /*public void CloseLeftHandDamageCollider()
+        {
+            leftHandDamageCollider.DisableDamageCollider();
+        }*/
 
         #endregion
     }

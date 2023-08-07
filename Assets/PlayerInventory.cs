@@ -19,6 +19,8 @@ namespace SST
         public int currentRightWeaponIndex = -1;
         public int currentLeftWeaponIndex = -1;
 
+        public List<WeaponItem> weaponsInventory;
+
         private void Awake()
         {
             weaponSlotManager = GetComponentInChildren<WeaponSlotManager>();
@@ -28,6 +30,12 @@ namespace SST
         {
             rightWeapon = unarmedWeapon;
             leftWeapon = unarmedWeapon;
+
+            // This one starts with both weapons equipped 
+            /*rightWeapon = weaponsInRightHandSlots[0];
+            leftWeapon = weaponsInLeftHandSlots[0];
+            weaponSlotManager.LoadWeaponOnSlot(rightWeapon, false);
+            weaponSlotManager.LoadWeaponOnSlot(leftWeapon, true);*/
         }
 
         public void ChangeRightWeapon()

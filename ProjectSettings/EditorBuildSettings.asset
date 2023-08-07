@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MainMenu.unity
+    path: Assets/Polytope Studio/Scenes/MainMenu.unity
     guid: 6140e28d5baefb44d9ac8154c0394dde
   - enabled: 1
     path: Assets/Polytope Studio/Scenes/SampleScene.unity

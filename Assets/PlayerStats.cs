@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace SST
 {
-    public class PlayerStats : MonoBehaviour
+    public class PlayerStats : CharacterStats
     {
-        public int healthLevel = 10;
+        /*public int healthLevel = 10;
         public int maxHealth;
-        public int currentHealth;
+        public int currentHealth;*/
 
         public HealthBar healthBar;
 
@@ -34,6 +34,9 @@ namespace SST
 
         public void TakeDamage(int damage)
         {
+            if (isDead)
+                return;
+
             currentHealth = currentHealth - damage;
 
             healthBar.SetCurrentHealth(currentHealth);
@@ -44,6 +47,7 @@ namespace SST
             {
                 currentHealth = 0;
                 animatorHandler.PlayTargetAnimation("Dead", true);
+                isDead = true;
                 //death animation
             }
         }
