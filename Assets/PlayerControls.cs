@@ -44,6 +44,24 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Lock On Target Left"",
+                    ""type"": ""Button"",
+                    ""id"": ""91f56e0e-5d34-4fd3-96e5-b69ba9605b04"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Lock On Target Right"",
+                    ""type"": ""Button"",
+                    ""id"": ""13362caa-66f1-4085-aff4-36814fe7f13b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -123,6 +141,28 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Camera"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""05372f18-4582-452a-bc12-d636833e754d"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Lock On Target Left"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9883a14a-faa2-41a9-bfde-7055e2b603e5"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Lock On Target Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -152,6 +192,51 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""name"": ""HA"",
                     ""type"": ""Button"",
                     ""id"": ""fb29c0da-701f-4eae-afdb-1abcac0ca2a7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""P"",
+                    ""type"": ""Button"",
+                    ""id"": ""b78762c1-65ef-44eb-b3c3-d0fb5ea7eb40"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""d5d8d2d8-8ea1-4809-8d3a-fd754c1987a8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Inventory"",
+                    ""type"": ""Button"",
+                    ""id"": ""04b4dc1a-52d0-44b5-903a-827a1234cc89"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LockOn"",
+                    ""type"": ""Button"",
+                    ""id"": ""a53bbc90-f066-4cae-a06a-581a06d8e33d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""T"",
+                    ""type"": ""Button"",
+                    ""id"": ""2daf732d-4eb3-408c-8c6d-e5786f8fcd41"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -202,6 +287,204 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""HA"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""250d33d9-5ca2-4c02-bee0-8548a493f4e2"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""P"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ab4084d1-b61d-4e0f-ac31-359285d02201"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fb46846b-ff80-4685-a131-fb58167a1192"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""08176a68-243d-430c-b47f-11ebf278797e"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e96ba281-3ade-4d3b-9e9d-593f5b46713b"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LockOn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2b39fcc3-b35e-4292-bf10-c5e809a28f5e"",
+                    ""path"": ""<Keyboard>/t"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""T"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""PlayerQuickSlots"",
+            ""id"": ""f29c7d32-e12f-4450-bfde-823bc26b1bce"",
+            ""actions"": [
+                {
+                    ""name"": ""D-Pad Up"",
+                    ""type"": ""Button"",
+                    ""id"": ""b764298d-2a47-4688-898f-fbeee9b66f65"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""D-Pad Down"",
+                    ""type"": ""Button"",
+                    ""id"": ""6d62a7b1-d0f8-49ab-ba0a-248b777429bf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""D-Pad Left"",
+                    ""type"": ""Button"",
+                    ""id"": ""d97af15f-65de-440a-a27d-ac0d8d663f88"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""D-Pad Right"",
+                    ""type"": ""Button"",
+                    ""id"": ""c34d9395-5f71-4d0f-b6dd-bcaaddcebf74"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""5b2c6ddc-010f-4d7e-a991-67c978193809"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""D-Pad Up"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b8b79fd5-5810-47f5-8d67-048a36665d32"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""D-Pad Up"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""331a37b2-0c8a-43ca-afc4-479f1a4b7562"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""D-Pad Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""19683f57-72cb-45ce-a852-b3898e3afbe3"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""D-Pad Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8e115981-442f-48f4-b006-87bc36eca303"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""D-Pad Left"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""def26c99-a40f-409b-b7c5-16214aa0b007"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""D-Pad Left"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""28442f9a-3f59-42b0-bb61-6920957e2bc3"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""D-Pad Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bea9b966-9657-43bb-801e-e8e9e349cec8"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""D-Pad Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -212,11 +495,24 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_PlayerMovement = asset.FindActionMap("Player Movement", throwIfNotFound: true);
         m_PlayerMovement_Movement = m_PlayerMovement.FindAction("Movement", throwIfNotFound: true);
         m_PlayerMovement_Camera = m_PlayerMovement.FindAction("Camera", throwIfNotFound: true);
+        m_PlayerMovement_LockOnTargetLeft = m_PlayerMovement.FindAction("Lock On Target Left", throwIfNotFound: true);
+        m_PlayerMovement_LockOnTargetRight = m_PlayerMovement.FindAction("Lock On Target Right", throwIfNotFound: true);
         // Player Actions
         m_PlayerActions = asset.FindActionMap("Player Actions", throwIfNotFound: true);
         m_PlayerActions_Roll = m_PlayerActions.FindAction("Roll", throwIfNotFound: true);
         m_PlayerActions_LA = m_PlayerActions.FindAction("LA", throwIfNotFound: true);
         m_PlayerActions_HA = m_PlayerActions.FindAction("HA", throwIfNotFound: true);
+        m_PlayerActions_P = m_PlayerActions.FindAction("P", throwIfNotFound: true);
+        m_PlayerActions_Jump = m_PlayerActions.FindAction("Jump", throwIfNotFound: true);
+        m_PlayerActions_Inventory = m_PlayerActions.FindAction("Inventory", throwIfNotFound: true);
+        m_PlayerActions_LockOn = m_PlayerActions.FindAction("LockOn", throwIfNotFound: true);
+        m_PlayerActions_T = m_PlayerActions.FindAction("T", throwIfNotFound: true);
+        // PlayerQuickSlots
+        m_PlayerQuickSlots = asset.FindActionMap("PlayerQuickSlots", throwIfNotFound: true);
+        m_PlayerQuickSlots_DPadUp = m_PlayerQuickSlots.FindAction("D-Pad Up", throwIfNotFound: true);
+        m_PlayerQuickSlots_DPadDown = m_PlayerQuickSlots.FindAction("D-Pad Down", throwIfNotFound: true);
+        m_PlayerQuickSlots_DPadLeft = m_PlayerQuickSlots.FindAction("D-Pad Left", throwIfNotFound: true);
+        m_PlayerQuickSlots_DPadRight = m_PlayerQuickSlots.FindAction("D-Pad Right", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -280,12 +576,16 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private List<IPlayerMovementActions> m_PlayerMovementActionsCallbackInterfaces = new List<IPlayerMovementActions>();
     private readonly InputAction m_PlayerMovement_Movement;
     private readonly InputAction m_PlayerMovement_Camera;
+    private readonly InputAction m_PlayerMovement_LockOnTargetLeft;
+    private readonly InputAction m_PlayerMovement_LockOnTargetRight;
     public struct PlayerMovementActions
     {
         private @PlayerControls m_Wrapper;
         public PlayerMovementActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_PlayerMovement_Movement;
         public InputAction @Camera => m_Wrapper.m_PlayerMovement_Camera;
+        public InputAction @LockOnTargetLeft => m_Wrapper.m_PlayerMovement_LockOnTargetLeft;
+        public InputAction @LockOnTargetRight => m_Wrapper.m_PlayerMovement_LockOnTargetRight;
         public InputActionMap Get() { return m_Wrapper.m_PlayerMovement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -301,6 +601,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Camera.started += instance.OnCamera;
             @Camera.performed += instance.OnCamera;
             @Camera.canceled += instance.OnCamera;
+            @LockOnTargetLeft.started += instance.OnLockOnTargetLeft;
+            @LockOnTargetLeft.performed += instance.OnLockOnTargetLeft;
+            @LockOnTargetLeft.canceled += instance.OnLockOnTargetLeft;
+            @LockOnTargetRight.started += instance.OnLockOnTargetRight;
+            @LockOnTargetRight.performed += instance.OnLockOnTargetRight;
+            @LockOnTargetRight.canceled += instance.OnLockOnTargetRight;
         }
 
         private void UnregisterCallbacks(IPlayerMovementActions instance)
@@ -311,6 +617,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Camera.started -= instance.OnCamera;
             @Camera.performed -= instance.OnCamera;
             @Camera.canceled -= instance.OnCamera;
+            @LockOnTargetLeft.started -= instance.OnLockOnTargetLeft;
+            @LockOnTargetLeft.performed -= instance.OnLockOnTargetLeft;
+            @LockOnTargetLeft.canceled -= instance.OnLockOnTargetLeft;
+            @LockOnTargetRight.started -= instance.OnLockOnTargetRight;
+            @LockOnTargetRight.performed -= instance.OnLockOnTargetRight;
+            @LockOnTargetRight.canceled -= instance.OnLockOnTargetRight;
         }
 
         public void RemoveCallbacks(IPlayerMovementActions instance)
@@ -335,6 +647,11 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerActions_Roll;
     private readonly InputAction m_PlayerActions_LA;
     private readonly InputAction m_PlayerActions_HA;
+    private readonly InputAction m_PlayerActions_P;
+    private readonly InputAction m_PlayerActions_Jump;
+    private readonly InputAction m_PlayerActions_Inventory;
+    private readonly InputAction m_PlayerActions_LockOn;
+    private readonly InputAction m_PlayerActions_T;
     public struct PlayerActionsActions
     {
         private @PlayerControls m_Wrapper;
@@ -342,6 +659,11 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Roll => m_Wrapper.m_PlayerActions_Roll;
         public InputAction @LA => m_Wrapper.m_PlayerActions_LA;
         public InputAction @HA => m_Wrapper.m_PlayerActions_HA;
+        public InputAction @P => m_Wrapper.m_PlayerActions_P;
+        public InputAction @Jump => m_Wrapper.m_PlayerActions_Jump;
+        public InputAction @Inventory => m_Wrapper.m_PlayerActions_Inventory;
+        public InputAction @LockOn => m_Wrapper.m_PlayerActions_LockOn;
+        public InputAction @T => m_Wrapper.m_PlayerActions_T;
         public InputActionMap Get() { return m_Wrapper.m_PlayerActions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -360,6 +682,21 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @HA.started += instance.OnHA;
             @HA.performed += instance.OnHA;
             @HA.canceled += instance.OnHA;
+            @P.started += instance.OnP;
+            @P.performed += instance.OnP;
+            @P.canceled += instance.OnP;
+            @Jump.started += instance.OnJump;
+            @Jump.performed += instance.OnJump;
+            @Jump.canceled += instance.OnJump;
+            @Inventory.started += instance.OnInventory;
+            @Inventory.performed += instance.OnInventory;
+            @Inventory.canceled += instance.OnInventory;
+            @LockOn.started += instance.OnLockOn;
+            @LockOn.performed += instance.OnLockOn;
+            @LockOn.canceled += instance.OnLockOn;
+            @T.started += instance.OnT;
+            @T.performed += instance.OnT;
+            @T.canceled += instance.OnT;
         }
 
         private void UnregisterCallbacks(IPlayerActionsActions instance)
@@ -373,6 +710,21 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @HA.started -= instance.OnHA;
             @HA.performed -= instance.OnHA;
             @HA.canceled -= instance.OnHA;
+            @P.started -= instance.OnP;
+            @P.performed -= instance.OnP;
+            @P.canceled -= instance.OnP;
+            @Jump.started -= instance.OnJump;
+            @Jump.performed -= instance.OnJump;
+            @Jump.canceled -= instance.OnJump;
+            @Inventory.started -= instance.OnInventory;
+            @Inventory.performed -= instance.OnInventory;
+            @Inventory.canceled -= instance.OnInventory;
+            @LockOn.started -= instance.OnLockOn;
+            @LockOn.performed -= instance.OnLockOn;
+            @LockOn.canceled -= instance.OnLockOn;
+            @T.started -= instance.OnT;
+            @T.performed -= instance.OnT;
+            @T.canceled -= instance.OnT;
         }
 
         public void RemoveCallbacks(IPlayerActionsActions instance)
@@ -390,15 +742,99 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         }
     }
     public PlayerActionsActions @PlayerActions => new PlayerActionsActions(this);
+
+    // PlayerQuickSlots
+    private readonly InputActionMap m_PlayerQuickSlots;
+    private List<IPlayerQuickSlotsActions> m_PlayerQuickSlotsActionsCallbackInterfaces = new List<IPlayerQuickSlotsActions>();
+    private readonly InputAction m_PlayerQuickSlots_DPadUp;
+    private readonly InputAction m_PlayerQuickSlots_DPadDown;
+    private readonly InputAction m_PlayerQuickSlots_DPadLeft;
+    private readonly InputAction m_PlayerQuickSlots_DPadRight;
+    public struct PlayerQuickSlotsActions
+    {
+        private @PlayerControls m_Wrapper;
+        public PlayerQuickSlotsActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @DPadUp => m_Wrapper.m_PlayerQuickSlots_DPadUp;
+        public InputAction @DPadDown => m_Wrapper.m_PlayerQuickSlots_DPadDown;
+        public InputAction @DPadLeft => m_Wrapper.m_PlayerQuickSlots_DPadLeft;
+        public InputAction @DPadRight => m_Wrapper.m_PlayerQuickSlots_DPadRight;
+        public InputActionMap Get() { return m_Wrapper.m_PlayerQuickSlots; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PlayerQuickSlotsActions set) { return set.Get(); }
+        public void AddCallbacks(IPlayerQuickSlotsActions instance)
+        {
+            if (instance == null || m_Wrapper.m_PlayerQuickSlotsActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_PlayerQuickSlotsActionsCallbackInterfaces.Add(instance);
+            @DPadUp.started += instance.OnDPadUp;
+            @DPadUp.performed += instance.OnDPadUp;
+            @DPadUp.canceled += instance.OnDPadUp;
+            @DPadDown.started += instance.OnDPadDown;
+            @DPadDown.performed += instance.OnDPadDown;
+            @DPadDown.canceled += instance.OnDPadDown;
+            @DPadLeft.started += instance.OnDPadLeft;
+            @DPadLeft.performed += instance.OnDPadLeft;
+            @DPadLeft.canceled += instance.OnDPadLeft;
+            @DPadRight.started += instance.OnDPadRight;
+            @DPadRight.performed += instance.OnDPadRight;
+            @DPadRight.canceled += instance.OnDPadRight;
+        }
+
+        private void UnregisterCallbacks(IPlayerQuickSlotsActions instance)
+        {
+            @DPadUp.started -= instance.OnDPadUp;
+            @DPadUp.performed -= instance.OnDPadUp;
+            @DPadUp.canceled -= instance.OnDPadUp;
+            @DPadDown.started -= instance.OnDPadDown;
+            @DPadDown.performed -= instance.OnDPadDown;
+            @DPadDown.canceled -= instance.OnDPadDown;
+            @DPadLeft.started -= instance.OnDPadLeft;
+            @DPadLeft.performed -= instance.OnDPadLeft;
+            @DPadLeft.canceled -= instance.OnDPadLeft;
+            @DPadRight.started -= instance.OnDPadRight;
+            @DPadRight.performed -= instance.OnDPadRight;
+            @DPadRight.canceled -= instance.OnDPadRight;
+        }
+
+        public void RemoveCallbacks(IPlayerQuickSlotsActions instance)
+        {
+            if (m_Wrapper.m_PlayerQuickSlotsActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IPlayerQuickSlotsActions instance)
+        {
+            foreach (var item in m_Wrapper.m_PlayerQuickSlotsActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_PlayerQuickSlotsActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public PlayerQuickSlotsActions @PlayerQuickSlots => new PlayerQuickSlotsActions(this);
     public interface IPlayerMovementActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnCamera(InputAction.CallbackContext context);
+        void OnLockOnTargetLeft(InputAction.CallbackContext context);
+        void OnLockOnTargetRight(InputAction.CallbackContext context);
     }
     public interface IPlayerActionsActions
     {
         void OnRoll(InputAction.CallbackContext context);
         void OnLA(InputAction.CallbackContext context);
         void OnHA(InputAction.CallbackContext context);
+        void OnP(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
+        void OnInventory(InputAction.CallbackContext context);
+        void OnLockOn(InputAction.CallbackContext context);
+        void OnT(InputAction.CallbackContext context);
+    }
+    public interface IPlayerQuickSlotsActions
+    {
+        void OnDPadUp(InputAction.CallbackContext context);
+        void OnDPadDown(InputAction.CallbackContext context);
+        void OnDPadLeft(InputAction.CallbackContext context);
+        void OnDPadRight(InputAction.CallbackContext context);
     }
 }
