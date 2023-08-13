@@ -7,6 +7,7 @@ TagManager:
   - Hittable
   - Enemy
   - Interactable
+  - WayPoints
   layers:
   - Default
   - TransparentFX
