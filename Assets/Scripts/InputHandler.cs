@@ -15,6 +15,7 @@ namespace SST
         public bool b_Input;
         public bool p_Input;
         public bool t_Input;
+        public bool v_Input;
         public bool la_Input;
         public bool ha_Input;
         public bool jump_Input;
@@ -51,7 +52,8 @@ namespace SST
 
         private void Awake()
         {
-            playerAttacker = GetComponent<PlayerAttacker>();
+            //playerAttacker = GetComponent<PlayerAttacker>();
+            playerAttacker = GetComponentInChildren<PlayerAttacker>();
             playerInventory = GetComponent<PlayerInventory>();
             playerManager = GetComponent<PlayerManager>();
             weaponSlotManager = GetComponentInChildren<WeaponSlotManager>();
@@ -73,13 +75,14 @@ namespace SST
                 inputActions.PlayerActions.HA.performed += i => ha_Input = true;
                 inputActions.PlayerQuickSlots.DPadRight.performed += i => d_Pad_Right = true;
                 inputActions.PlayerQuickSlots.DPadLeft.performed += i => d_Pad_Left = true;
-                inputActions.PlayerActions.P.performed += i => p_Input = true;
+                inputActions.PlayerActions.P.performed += i => p_Input = true;               
                 inputActions.PlayerActions.Jump.performed += i => jump_Input = true;
                 inputActions.PlayerActions.Inventory.performed += i => inventory_Input = true;
                 inputActions.PlayerActions.LockOn.performed += i => lockOnInput = true;
                 inputActions.PlayerMovement.LockOnTargetRight.performed += i => rightLockOnInput = true;
                 inputActions.PlayerMovement.LockOnTargetLeft.performed += i => leftLockOnInput = true;
                 inputActions.PlayerActions.T.performed += i => t_Input = true;
+                inputActions.PlayerActions.TalkToNPC.performed += i => v_Input = true;
             }
 
             inputActions.Enable();
@@ -136,7 +139,8 @@ namespace SST
         {
             if (la_Input)
             {
-                if (playerManager.canDoCombo)
+                playerAttacker.HandleLAAction();
+                /*if (playerManager.canDoCombo)
                 {
                     comboFlag = true;
                     playerAttacker.HandleWeaponCombo(playerInventory.rightWeapon);
@@ -152,12 +156,13 @@ namespace SST
 
                     animatorHandler.anim.SetBool("isUsingRightHand", true);
                     playerAttacker.HandleLightAttack(playerInventory.rightWeapon);
-                }
+                }*/
             }
 
             if (ha_Input)
             {
-                playerAttacker.HandleHeavyAttack(playerInventory.rightWeapon);
+                playerAttacker.HandleHAAction();
+                //playerAttacker.HandleHeavyAttack(playerInventory.rightWeapon);
             }
         }
 
@@ -255,5 +260,7 @@ namespace SST
                 }
             }
         }
+
+        
     }
 }

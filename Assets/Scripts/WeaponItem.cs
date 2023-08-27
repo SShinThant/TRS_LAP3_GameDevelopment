@@ -21,5 +21,11 @@ namespace SST
         public string OH_Heavy_Attack_1;
         public string TH_Light_Attack_01;
         public string TH_Light_Attack_02;
+
+        [Header("Weapon Type")]
+        public bool isSpellCaster;
+        public bool isFaithCaster;
+        public bool isPyroCaster;
+        public bool isMeleeWeapon;
     }
 }

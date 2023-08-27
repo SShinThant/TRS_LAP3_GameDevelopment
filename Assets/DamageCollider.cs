@@ -43,10 +43,28 @@ namespace SST
             if (collision.tag == "Enemy")
             {
                 EnemyStats enemyStats = collision.GetComponent<EnemyStats>();
+                TurtleStats turtleStats = collision.GetComponent<TurtleStats>();
+                SlimeStats slimeStats = collision.GetComponent<SlimeStats>();
+                DragonBossStats dragonBossStats = collision.GetComponent<DragonBossStats>();
 
                 if (enemyStats != null)
                 {
                     enemyStats.TakeDamage(currentWeaponDamage);
+                }
+
+                if (turtleStats != null)
+                {
+                    turtleStats.TakeDamage(currentWeaponDamage);
+                }
+
+                if (slimeStats != null)
+                {
+                    slimeStats.TakeDamage(currentWeaponDamage);
+                }
+
+                if (dragonBossStats != null)
+                {
+                    dragonBossStats.TakeDamage(currentWeaponDamage);
                 }
             }
         }

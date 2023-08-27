@@ -185,6 +185,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "X",
+                    "type": "Button",
+                    "id": "a31df309-81ba-48f1-8f31-8e3f25a4e86c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Jump",
                     "type": "Button",
                     "id": "d5d8d2d8-8ea1-4809-8d3a-fd754c1987a8",
@@ -216,6 +225,24 @@
                     "type": "Button",
                     "id": "2daf732d-4eb3-408c-8c6d-e5786f8fcd41",
                     "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TalkToNPC",
+                    "type": "Button",
+                    "id": "2cc86531-92f1-4fe3-8509-c7ee0d64a8d5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Response",
+                    "type": "PassThrough",
+                    "id": "2ed11de9-fbb4-46e7-ac99-64825b1f965c",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -329,6 +356,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "T",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "741a130c-a5fc-4b5c-9805-b523b84dd0ca",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "X",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c64895ed-41a5-4838-a537-5081924ad6fd",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TalkToNPC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2b9835d6-15ba-44d8-a66d-c7deb390d967",
+                    "path": "<Mouse>/scroll/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Response",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace SST
 {
@@ -10,9 +12,16 @@ namespace SST
         public int maxHealth;
         public int currentHealth;*/
 
+        public static event Action OnPlayerDeath;
+
         public HealthBar healthBar;
 
         AnimatorHandler animatorHandler;
+
+        /*[SerializeField]
+        private float delayBeforeLoading = 5f;
+
+        private float timeElapsed;*/
 
         private void Awake()
         {
@@ -25,6 +34,8 @@ namespace SST
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(maxHealth);
         }
+
+        
 
         private int SetMaxHealthFromHealthLevel()
         {
@@ -43,13 +54,47 @@ namespace SST
 
             animatorHandler.PlayTargetAnimation("Damage", true);
 
+
+            
+
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
                 animatorHandler.PlayTargetAnimation("Dead", true);
                 isDead = true;
-                //death animation
+                GetComponent<Collider>().enabled = false;
+                OnPlayerDeath?.Invoke();
+                //SceneManager.LoadScene("GameOverScene");
+                
+                /*timeElapsed += Time.deltaTime;
+
+                if (timeElapsed > delayBeforeLoading && currentHealth <= 0)
+                {
+                    animatorHandler.PlayTargetAnimation("Dead", true);
+                    SceneManager.LoadScene("GameOverScene");
+                }*/
+                
             }
+        }
+
+        public void HealPlayer(int healAmount)
+        {
+            currentHealth = currentHealth + healAmount;
+
+            if (currentHealth > maxHealth)
+            {
+                currentHealth = maxHealth;
+            }
+
+            healthBar.SetCurrentHealth(currentHealth);
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.tag == "Win")
+            {
+                SceneManager.LoadScene("VictoryScene");
+            }        
         }
     }
 }

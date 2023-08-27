@@ -27,6 +27,7 @@ namespace SST
             animatorHandler = playerManager.GetComponentInChildren<AnimatorHandler>();
 
             playerLocomotion.rigidbody.velocity = Vector3.zero; // stops player from moving when picking up item
+            AudioManager.instance.Play("ItemPick");
             animatorHandler.PlayTargetAnimation("Pick Up Item", true); // plays picking up animation
             playerInventory.weaponsInventory.Add(weapon);
             playerManager.itemInteractableGameObject.GetComponentInChildren<Text>().text = weapon.itemName;

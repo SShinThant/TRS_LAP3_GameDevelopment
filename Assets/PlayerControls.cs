@@ -207,6 +207,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""X"",
+                    ""type"": ""Button"",
+                    ""id"": ""a31df309-81ba-48f1-8f31-8e3f25a4e86c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""d5d8d2d8-8ea1-4809-8d3a-fd754c1987a8"",
@@ -238,6 +247,24 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""type"": ""Button"",
                     ""id"": ""2daf732d-4eb3-408c-8c6d-e5786f8fcd41"",
                     ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TalkToNPC"",
+                    ""type"": ""Button"",
+                    ""id"": ""2cc86531-92f1-4fe3-8509-c7ee0d64a8d5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Response"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""2ed11de9-fbb4-46e7-ac99-64825b1f965c"",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -351,6 +378,39 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""T"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""741a130c-a5fc-4b5c-9805-b523b84dd0ca"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""X"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c64895ed-41a5-4838-a537-5081924ad6fd"",
+                    ""path"": ""<Keyboard>/v"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TalkToNPC"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2b9835d6-15ba-44d8-a66d-c7deb390d967"",
+                    ""path"": ""<Mouse>/scroll/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Response"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -503,10 +563,13 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_PlayerActions_LA = m_PlayerActions.FindAction("LA", throwIfNotFound: true);
         m_PlayerActions_HA = m_PlayerActions.FindAction("HA", throwIfNotFound: true);
         m_PlayerActions_P = m_PlayerActions.FindAction("P", throwIfNotFound: true);
+        m_PlayerActions_X = m_PlayerActions.FindAction("X", throwIfNotFound: true);
         m_PlayerActions_Jump = m_PlayerActions.FindAction("Jump", throwIfNotFound: true);
         m_PlayerActions_Inventory = m_PlayerActions.FindAction("Inventory", throwIfNotFound: true);
         m_PlayerActions_LockOn = m_PlayerActions.FindAction("LockOn", throwIfNotFound: true);
         m_PlayerActions_T = m_PlayerActions.FindAction("T", throwIfNotFound: true);
+        m_PlayerActions_TalkToNPC = m_PlayerActions.FindAction("TalkToNPC", throwIfNotFound: true);
+        m_PlayerActions_Response = m_PlayerActions.FindAction("Response", throwIfNotFound: true);
         // PlayerQuickSlots
         m_PlayerQuickSlots = asset.FindActionMap("PlayerQuickSlots", throwIfNotFound: true);
         m_PlayerQuickSlots_DPadUp = m_PlayerQuickSlots.FindAction("D-Pad Up", throwIfNotFound: true);
@@ -648,10 +711,13 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerActions_LA;
     private readonly InputAction m_PlayerActions_HA;
     private readonly InputAction m_PlayerActions_P;
+    private readonly InputAction m_PlayerActions_X;
     private readonly InputAction m_PlayerActions_Jump;
     private readonly InputAction m_PlayerActions_Inventory;
     private readonly InputAction m_PlayerActions_LockOn;
     private readonly InputAction m_PlayerActions_T;
+    private readonly InputAction m_PlayerActions_TalkToNPC;
+    private readonly InputAction m_PlayerActions_Response;
     public struct PlayerActionsActions
     {
         private @PlayerControls m_Wrapper;
@@ -660,10 +726,13 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @LA => m_Wrapper.m_PlayerActions_LA;
         public InputAction @HA => m_Wrapper.m_PlayerActions_HA;
         public InputAction @P => m_Wrapper.m_PlayerActions_P;
+        public InputAction @X => m_Wrapper.m_PlayerActions_X;
         public InputAction @Jump => m_Wrapper.m_PlayerActions_Jump;
         public InputAction @Inventory => m_Wrapper.m_PlayerActions_Inventory;
         public InputAction @LockOn => m_Wrapper.m_PlayerActions_LockOn;
         public InputAction @T => m_Wrapper.m_PlayerActions_T;
+        public InputAction @TalkToNPC => m_Wrapper.m_PlayerActions_TalkToNPC;
+        public InputAction @Response => m_Wrapper.m_PlayerActions_Response;
         public InputActionMap Get() { return m_Wrapper.m_PlayerActions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -685,6 +754,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @P.started += instance.OnP;
             @P.performed += instance.OnP;
             @P.canceled += instance.OnP;
+            @X.started += instance.OnX;
+            @X.performed += instance.OnX;
+            @X.canceled += instance.OnX;
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
@@ -697,6 +769,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @T.started += instance.OnT;
             @T.performed += instance.OnT;
             @T.canceled += instance.OnT;
+            @TalkToNPC.started += instance.OnTalkToNPC;
+            @TalkToNPC.performed += instance.OnTalkToNPC;
+            @TalkToNPC.canceled += instance.OnTalkToNPC;
+            @Response.started += instance.OnResponse;
+            @Response.performed += instance.OnResponse;
+            @Response.canceled += instance.OnResponse;
         }
 
         private void UnregisterCallbacks(IPlayerActionsActions instance)
@@ -713,6 +791,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @P.started -= instance.OnP;
             @P.performed -= instance.OnP;
             @P.canceled -= instance.OnP;
+            @X.started -= instance.OnX;
+            @X.performed -= instance.OnX;
+            @X.canceled -= instance.OnX;
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
@@ -725,6 +806,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @T.started -= instance.OnT;
             @T.performed -= instance.OnT;
             @T.canceled -= instance.OnT;
+            @TalkToNPC.started -= instance.OnTalkToNPC;
+            @TalkToNPC.performed -= instance.OnTalkToNPC;
+            @TalkToNPC.canceled -= instance.OnTalkToNPC;
+            @Response.started -= instance.OnResponse;
+            @Response.performed -= instance.OnResponse;
+            @Response.canceled -= instance.OnResponse;
         }
 
         public void RemoveCallbacks(IPlayerActionsActions instance)
@@ -825,10 +912,13 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnLA(InputAction.CallbackContext context);
         void OnHA(InputAction.CallbackContext context);
         void OnP(InputAction.CallbackContext context);
+        void OnX(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnInventory(InputAction.CallbackContext context);
         void OnLockOn(InputAction.CallbackContext context);
         void OnT(InputAction.CallbackContext context);
+        void OnTalkToNPC(InputAction.CallbackContext context);
+        void OnResponse(InputAction.CallbackContext context);
     }
     public interface IPlayerQuickSlotsActions
     {

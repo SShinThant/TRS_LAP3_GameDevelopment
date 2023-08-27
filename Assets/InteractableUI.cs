@@ -9,5 +9,6 @@ namespace SST
     {
         public Text interactableText;
         public Text itemText;
+        
     }
 }

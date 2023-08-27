@@ -69,11 +69,13 @@ namespace SST
             HP -= damage;
             if (HP <= 0)
             {
+                AudioManager.instance.Play("SkeletonDeath");
                 animator.SetTrigger("die");
                 GetComponent<Collider>().enabled = false;
             }
             else
             {
+                AudioManager.instance.Play("SkeletonDamage");
                 animator.SetTrigger("damage");
             }
         }

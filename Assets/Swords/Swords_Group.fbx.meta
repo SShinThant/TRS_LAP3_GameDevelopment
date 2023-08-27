@@ -3,7 +3,42 @@ guid: 441afe753f9e7b94a9f204e7b19e2543
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BloodSword_Mat1
+    second: {fileID: 2100000, guid: 6bf0159edd11e85409b11835f88f7417, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: IceSword_Mat
+    second: {fileID: 2100000, guid: c836c072270ef604784310c89e5561c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LavaSword_Mat
+    second: {fileID: 2100000, guid: cbfa6057b76c8fe4ea19a7758f4a092f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MeteorSword_Mat
+    second: {fileID: 2100000, guid: 93a388064df6e8e43b93f1d7c7be68bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PointySword_Mat
+    second: {fileID: 2100000, guid: b2459e8182ac5fa4cbc0ab4272fbb027, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SunSword_Mat
+    second: {fileID: 2100000, guid: 84914148448e88148a6ec2e46e307554, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ThinSword_Mat
+    second: {fileID: 2100000, guid: b713cfc0aa4e41c4e9ee06a225ce073e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
